@@ -42,7 +42,23 @@ public class TeatroMenu {
             System.out.println("\nEscolha: ");
 
             opcao = leia.nextInt();
+            if (opcao == 0) break;
+
+            System.out.println("Escolha a sala:");
+            for (int i = 0; i < NUM_SALAS; i++) {
+                System.out.println(i + " - " + nomesSalas[i]);
+            }
+
+            int s = leia.nextInt();
+
+            if (s < 0 || s >= NUM_SALAS) {
+                System.out.println("Sala inválida!");
+                continue;
+            }
+
 
     } while (opcao != 0);
+
+    
 }
 }
