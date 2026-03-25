@@ -4,6 +4,8 @@ public class TeatroMenu {
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
 
+        //Declarando variáveis
+
         int NUM_SALAS = 2;
 
         String[] nomesSalas = {
@@ -18,6 +20,8 @@ public class TeatroMenu {
 
         double[] precoInteiro = {100, 120};
 
+        //matriz da sala
+
         char[][][] cadeiras = new char[NUM_SALAS][12][12];
 
         for (int s = 0; s < NUM_SALAS; s++) {
@@ -30,6 +34,7 @@ public class TeatroMenu {
 
         int opcao;
 
+//menu
         do {
 
             System.out.println("\n===== TEATRO DEVISATE =====");
@@ -56,7 +61,7 @@ public class TeatroMenu {
                 continue;
             }
 
-
+//mostrar o mapa da sala
             if (opcao == 1) {
                 System.out.println("\n===========================================");
                 System.out.println(" SALA: " + nomesSalas[s]);
@@ -94,6 +99,26 @@ public class TeatroMenu {
                 System.out.println("\n[ ] Livre   [R] Reservada   [X] Ocupada");
                 System.out.println("Livres: "+livres+ " | Reservadas: "+reservadas+" | Ocupadas: "+ocupadas);            
             }
+//informar a linha e coluna pra aplicar nas opções que precisam
+
+            else if (opcao >= 2 && opcao <= 4) {
+                System.out.print("Linha (A-L): ");
+                char linha = leia.next().toUpperCase().charAt(0);
+                
+                System.out.print("Coluna (1-12): ");
+                int coluna = leia.nextInt();
+                
+                int l = linha - 'A';
+                int c = coluna - 1;
+
+                if (l < 0 || l >= 12 || c < 0 || c >= 12) {
+                    System.out.println("Posição Inválida!");
+                    continue;
+                }
+                char estado = cadeiras[s][l][c];
+
+            }
+
 
 
     } while (opcao != 0);
