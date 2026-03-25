@@ -57,6 +57,45 @@ public class TeatroMenu {
             }
 
 
+            if (opcao == 1) {
+                System.out.println("\n===========================================");
+                System.out.println(" SALA: " + nomesSalas[s]);
+                System.out.println(" ESPETÁCULO: " + espetaculos[s]);
+                System.out.println("===========================================\n");
+
+                System.out.print("    ");
+                for (int i = 1; i <= 12; i++)
+                System.out.printf("%4d", i);
+
+                System.out.println();
+
+                int livres = 0, reservadas = 0, ocupadas = 0;
+
+                for (int i = 0; i < 12; i++) {
+                
+                System.out.print("  " + (char) ('A' + i) + "   ");
+
+                for (int j = 0; j < 12; j++) {
+
+                    char estado = cadeiras[s][i][j];
+
+                    char simbolo = estado == ' ' ? ' ' : estado;
+
+                    System.out.print("["+ simbolo + "] " );
+
+                    if (estado == ' ') livres++;
+                    else if (estado == 'R') reservadas++;
+                    else ocupadas++;
+                }
+                System.out.println();
+
+                }
+
+                System.out.println("\n[ ] Livre   [R] Reservada   [X] Ocupada");
+                System.out.println("Livres: "+livres+ " | Reservadas: "+reservadas+" | Ocupadas: "+ocupadas);            
+            }
+
+
     } while (opcao != 0);
 
     
