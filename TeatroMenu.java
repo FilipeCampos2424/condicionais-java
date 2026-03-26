@@ -61,6 +61,8 @@ public class TeatroMenu {
                 continue;
             }
 
+            double meia = precoInteiro[s] / 2;  
+
 //mostrar o mapa da sala
             if (opcao == 1) {
                 System.out.println("\n===========================================");
@@ -97,11 +99,15 @@ public class TeatroMenu {
                 }
 
                 System.out.println("\n[ ] Livre   [R] Reservada   [X] Ocupada");
-                System.out.println("Livres: "+livres+ " | Reservadas: "+reservadas+" | Ocupadas: "+ocupadas);            
+                System.out.println("Livres: "+livres+ " | Reservadas: "+reservadas+" | Ocupadas: "+ocupadas);  
+                       
             }
+
+            
 //informar a linha e coluna pra aplicar nas opções que precisam
 
             else if (opcao >= 2 && opcao <= 4) {
+ 
                 System.out.print("Linha (A-L): ");
                 char linha = leia.next().toUpperCase().charAt(0);
                 
@@ -117,9 +123,48 @@ public class TeatroMenu {
                 }
                 char estado = cadeiras[s][l][c];
 
+//Reservar 
+            if (opcao == 2) {
+                if (estado == ' '){
+                    cadeiras[s][l][c] = 'R';
+                    System.out.println("Reserva feita! Valor pago: R$"+meia);
+                }
+                else {
+                    System.out.println("Falha na reserva, cadeira já ocupada.");
+                }
+            }
+
+//Comprar
+            if (opcao == 3) {
+                if (estado == ' '){
+                    cadeiras[s][l][c] = 'X';
+                    System.out.println("Compra realizada! Valor pago: R$"+precoInteiro[s]);
+                }
+                else if (estado == 'R'){
+                    cadeiras[s][l][c] = 'X';
+                    System.out.println("Compra realizada! Valor adicional pago: R$"+meia);
+                }
+                else {
+                    System.out.println("Falha na compra, cadeira já ocupada.");
+                }
+            }
+
+//Cancelar
+            if (opcao == 4) {
+                if (estado == 'R') {
+                    cadeiras[s][l][c] = ' ';
+                    System.out.println("Reserva cancelada com sucesso! Valor do Reembolso: R$"+meia);
+                }
+                else {
+                    System.out.println("Não há reserva para cancelar.");
+                }
+            }
+
             }
 
 
+
+        
 
     } while (opcao != 0);
 
