@@ -47,7 +47,11 @@ public class TeatroMenu {
             System.out.println("\nEscolha: ");
 
             opcao = leia.nextInt();
-            if (opcao == 0) break;
+            if (opcao == 0) {
+            System.out.println("Encerrando programa....");
+            break;
+            
+            } 
 
             System.out.println("Escolha a sala:");
             for (int i = 0; i < NUM_SALAS; i++) {
@@ -160,14 +164,43 @@ public class TeatroMenu {
                 }
             }
 
+        }
+
+//Relatório
+
+            else if (opcao == 5) {
+                int livres = 0, reservadas = 0, ocupadas = 0;
+
+                for (int i = 0; i < 12; i++){
+                    for (int j = 0; j < 12; j++) {
+
+                        switch (cadeiras[s][i][j]) {
+                            case ' ': livres++; break;
+                            case 'R': reservadas++; break;
+                            case 'X': ocupadas++; break;
+                        }
+                    }
+                }
+
+
+                double arrecadado = ocupadas * precoInteiro[s];
+                double reservas = reservadas * meia;
+                double potencialReservas = arrecadado + reservas;
+                double potencialMax = potencialReservas + livres * precoInteiro[s];
+
+                System.out.println("\n===== RELATÓRIO FINANCEIRO =====");
+                System.out.println("Livres: "+livres);
+                System.out.println("Reservadas: "+reservadas);
+                System.out.println("Ocupadas: "+ocupadas);
+                System.out.println("Total arrecadado: R$"+arrecadado);
+                System.out.println("Total em reservas: R$"+reservas);
+                System.out.println("Receita potencial de reservas: R$"+potencialReservas);
+                System.out.println("Receita potencial máxima: R$"+potencialMax);
             }
-
-
-
         
 
     } while (opcao != 0);
 
-    
+
 }
 }
