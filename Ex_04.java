@@ -7,6 +7,6 @@ public class Ex_04{
         int temperatura = leia.nextInt();
         String resultado = (temperatura < 15) ? "Frio" : (temperatura <= 25) ? "Agradável" : "Quente";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

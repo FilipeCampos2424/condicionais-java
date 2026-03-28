@@ -20,6 +20,6 @@ public class Ex_16{
 
     String resultado = (numero == multiplo) ? "O número informado é múltiplo de 3 e 5" : (numero == multi3) ? "O número informado é apenas múltiplo de 3" : "O número informado é apenas múltiplo de 5";
     System.out.println(resultado);
-    leia.close();
+    
     }   
 }  

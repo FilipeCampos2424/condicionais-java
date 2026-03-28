@@ -11,6 +11,6 @@ public class Ex_14{
         int n3 = leia.nextInt();
         String resultado = (n1 > n2 && n1 > n3) ? "O número "+n1+" é o maior." : (n2 > n1 && n2 > n3) ? "O número "+n2+" é o maior." : (n1 == n2 && n2 == n3) ? "Empate, todos são iguais" : "O número "+n3+" é o maior.";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

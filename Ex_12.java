@@ -7,6 +7,6 @@ public class Ex_12{
         int nota = leia.nextInt();
         String resultado = (nota <= 4) ? "Nota D" : (nota <= 6) ? "Nota C" : (nota <= 8) ? "Nota B" : "Nota A";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

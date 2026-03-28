@@ -61,7 +61,7 @@ public class Ex_13{
             
         }   
           }
-        leia.close();
+        
         }
 
     }   

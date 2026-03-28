@@ -54,6 +54,6 @@ public class Ex_20{
         
         System.out.println(resultado);
 
-        leia.close();
+        
     }   
 }  

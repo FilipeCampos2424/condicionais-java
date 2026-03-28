@@ -9,6 +9,6 @@ public class Ex_02{
         int n2 = leia.nextInt();
         String resultado = (n1 > n2) ? "O número "+n1+" é maior." : "O número "+n2+" é maior.";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

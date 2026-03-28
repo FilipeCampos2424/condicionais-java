@@ -10,6 +10,6 @@ public class Ex_08{
         Double imc = peso / (altura * altura);
         String resultado = (imc < 18.5) ? "Abaixo do peso" : (imc < 25) ? "Peso normal" : (imc < 30) ? "Sobrepeso" : "Obesidade";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

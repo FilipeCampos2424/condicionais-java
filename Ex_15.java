@@ -11,6 +11,6 @@ public class Ex_15{
         String senha = leia.nextLine();        
         String resultado = (user.equals("Admin") && senha.equals("123456")) ? "Acesso Permitido" : "Acesso Negado";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

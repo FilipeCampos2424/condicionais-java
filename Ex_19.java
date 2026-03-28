@@ -13,6 +13,6 @@ public class Ex_19{
          String resultado = (vel <= limite) ? "Sem multa" : (vel <= por20) ? "Multa leve" : (vel <= por50) ? "Multa grave" : "Multa gravíssima + suspensão";
 
         System.out.println(resultado);  
-        leia.close();
+        
     }   
 }  

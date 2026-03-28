@@ -20,6 +20,6 @@ public class Ex_17{
         }
         double valorFinal = valor - desconto;
         System.out.println("Valor final da compra: "+valorFinal);  
-        leia.close();
+        
     }   
 }  

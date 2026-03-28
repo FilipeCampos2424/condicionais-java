@@ -7,6 +7,6 @@ public class Ex_03{
         int media = leia.nextInt();
         String resultado = (media >= 7) ? "Aprovado" : (media >= 5 && media < 7) ? "Recuperação" : "Reprovado";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

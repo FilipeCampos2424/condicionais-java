@@ -39,6 +39,6 @@ public class Ex_09{
             break;            
         }   
         }
-        leia.close();
+        
     }   
 }  

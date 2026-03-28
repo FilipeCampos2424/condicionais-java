@@ -7,6 +7,6 @@ public class Ex_01{
         int numero = leia.nextInt();
         String resultado = (numero % 2 == 0) ? "O número informado é par." : "O número informado é ímpar.";
         System.out.println(resultado);
-        leia.close();
+        
     }   
 }  

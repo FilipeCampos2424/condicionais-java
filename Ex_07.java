@@ -32,6 +32,6 @@ public class Ex_07{
         System.out.println("Os valores informados não fazem um triângulo válido.");
         }
 
-        leia.close();
+        
     }   
 }  
